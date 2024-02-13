@@ -1,5 +1,5 @@
 ﻿using Prueba.Domain.Admins.Models;
-using Jazani.Domain.Cores.Repositories;
+using Prueba.Domain.Cores.Repositories;
 
 namespace Prueba.Domain.Admins.Repositories
 {

@@ -12,10 +12,13 @@ namespace Prueba.Domain.Cores.Repositories
 	        Expression<Func<TEntity, bool>> predicate,
 	        List<Expression<Func<TEntity, object>>> includes = null,
 	        bool disableTracking = true);
+
+        /*
         Task<IReadOnlyList<TEntity>> FindAllAsync(
 	        Expression<Func<TEntity, bool>> predicate,
 	        List<Expression<Func<TEntity, object>>> includes = null,
 	        Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null);
-	}
+		*/
+    }
 }
 

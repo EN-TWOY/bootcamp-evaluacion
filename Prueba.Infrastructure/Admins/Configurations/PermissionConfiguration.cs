@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Prueba.Domain.Admins.Models;
 using Prueba.Infrastructure.Cores.Converters;
 
-namespace Jazani.Infrastructure.Admins.Configurations
+namespace Prueba.Infrastructure.Admins.Configurations
 {
     public class PermissionConfiguration : IEntityTypeConfiguration<Permission>
     {
