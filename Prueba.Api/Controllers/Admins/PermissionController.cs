@@ -31,19 +31,19 @@ namespace Prueba.Api.Controllers.Admins
         }
 
         [HttpPost]
-        public async Task<PermissionSimpleDto> Post([FromBody] PermissionSaveDto saveDto)
+        public async Task<PermissionDto> Post([FromBody] PermissionSaveDto saveDto)
         {
             return await _permissionService.CreateAsync(saveDto);
         }
 
         [HttpPut("{id}")]
-        public async Task<PermissionSimpleDto> Put(int id, [FromBody] PermissionSaveDto saveDto)
+        public async Task<PermissionDto> Put(int id, [FromBody] PermissionSaveDto saveDto)
         {
             return await _permissionService.EditAsync(id, saveDto);
         }
 
         [HttpDelete("{id}")]
-        public async Task<PermissionSimpleDto> Delete(int id)
+        public async Task<PermissionDto> Delete(int id)
         {
             return await _permissionService.DisabledAsync(id);
         }

@@ -13,10 +13,10 @@ namespace Prueba.Application.Admins.Services
 
         Task<PermissionDto> FindByIdAsync(int id);
 
-        Task<PermissionSimpleDto> CreateAsync(PermissionSaveDto saveDto);
+        Task<PermissionDto> CreateAsync(PermissionSaveDto saveDto);
 
-        Task<PermissionSimpleDto> EditAsync(int id, PermissionSaveDto saveDto);
+        Task<PermissionDto> EditAsync(int id, PermissionSaveDto saveDto);
 
-        Task<PermissionSimpleDto> DisabledAsync(int id);
+        Task<PermissionDto> DisabledAsync(int id);
     }
 }
