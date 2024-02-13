@@ -3,7 +3,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace Practica.Application.Cores.Contexts
+namespace Prueba.Application.Cores.Contexts
 {
     public static class ApplicationServiceRegistration
 	{

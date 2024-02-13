@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
 
-namespace Practica.Application.Cores.Contexts
+namespace Prueba.Application.Cores.Contexts
 {
 	public class ApplicationAutofacModule : Autofac.Module
 	{

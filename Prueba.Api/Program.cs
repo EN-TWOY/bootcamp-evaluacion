@@ -1,7 +1,8 @@
 using Autofac.Extensions.DependencyInjection;
 using Autofac;
-using Practica.Application.Cores.Contexts;
+using Prueba.Application.Cores.Contexts;
 using Prueba.Infrastructure.Cores.Contexts;
+using Prueba.Api.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +26,7 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
     });
 
 // Api
-
+builder.Services.AddTransient<ExceptionMiddleware>();
 
 var app = builder.Build();
 
