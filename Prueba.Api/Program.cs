@@ -1,3 +1,6 @@
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
+using Practica.Application.Cores.Contexts;
 using Prueba.Infrastructure.Cores.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +16,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
 // Application
-// builder.Services.AddApplicationService();
+builder.Services.AddApplicationService();
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>(options =>
+    {
+        options.RegisterModule(new InfrastructureAutofactModule());
+        options.RegisterModule(new ApplicationAutofacModule());
+    });
+
+// Api
+
 
 var app = builder.Build();
 
