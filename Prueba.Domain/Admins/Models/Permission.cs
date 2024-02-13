@@ -14,5 +14,7 @@ namespace Prueba.Domain.Admins.Models
         public string Slug { get; set; } = default!;
         public DateTime RegistrationDate { get; set; }
         public bool State { get; set; }
+
+        public virtual ICollection<RoleMenuPermission> RoleMenuPermissions { get; set; }
     }
 }

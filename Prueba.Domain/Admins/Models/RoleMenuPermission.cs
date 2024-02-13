@@ -13,5 +13,8 @@ namespace Prueba.Domain.Admins.Models
         public int PermissionId { get; set; }
         public DateTime RegistrationDate { get; set; }
         public bool State { get; set; }
+
+        public virtual Menu Menu { get; set; }
+        public virtual Permission Permission { get; set; }
     }
 }
